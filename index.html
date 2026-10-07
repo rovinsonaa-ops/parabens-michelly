@@ -810,8 +810,11 @@
 </head>
 <body>
 
-  <!-- Audio Element (Prepared for User's Track) -->
-  <audio id="birthday-audio" preload="auto" loop></audio>
+  <!-- Audio Element (Só Pra Contrariar - Você Virou Saudade) -->
+  <audio id="birthday-audio" preload="auto" loop playsinline>
+    <source src="assets/musica.mp4" type="audio/mp4">
+    <source src="assets/musica.m4a" type="audio/mp4">
+  </audio>
 
   <!-- Ambient Visual Canvases & Lighting -->
   <div class="ambient-glow-mesh">
@@ -966,7 +969,7 @@
       BIRTHDAY_NAME: "MICHELLY",
       PHOTO_URL_PRIMARY: "assets/michelly-rio.jpg",
       PHOTO_URL_SECONDARY: "assets/michelly-portrait.jpg",
-      MUSIC_URL: "", // Espacio preparado para la música que proporcionará el usuario
+      MUSIC_URL: "assets/musica.mp4", // Só Pra Contrariar - Você Virou Saudade
       BIRTHDAY_MESSAGE: "Que seu novo ano seja repleto de sorrisos contagiantes, saúde, amor, paz e muitas conquistas inesquecíveis. Parabéns pelo seu dia!",
       WHATSAPP_NUMBER: "" // Opcional para enviar felicitación
     };
@@ -1199,6 +1202,7 @@
     giftStageTap.addEventListener("click", openGiftSequence);
 
     // Alternar entre a foto no Rio de Janeiro e o retrato
+    const photoLocationPill = document.querySelector(".photo-location-pill");
     btnTogglePhoto.addEventListener("click", () => {
       michellyMainPhoto.style.opacity = "0";
       michellyMainPhoto.style.transform = "scale(0.95)";
@@ -1207,9 +1211,15 @@
         if (currentPhotoIsRio) {
           michellyMainPhoto.src = CONFIG.PHOTO_URL_SECONDARY;
           btnTogglePhoto.innerText = "✦ Ver foto no Rio de Janeiro";
+          if (photoLocationPill) {
+            photoLocationPill.innerHTML = '<span style="color:var(--br-gold-light);">Linda & Radiante ✨</span>';
+          }
         } else {
           michellyMainPhoto.src = CONFIG.PHOTO_URL_PRIMARY;
           btnTogglePhoto.innerText = "✦ Ver outro momento";
+          if (photoLocationPill) {
+            photoLocationPill.innerHTML = '<svg class="flag-icon-svg" viewBox="0 0 720 504"><rect width="720" height="504" fill="#009b3a"/><polygon points="360,42 660,252 360,462 60,252" fill="#fedf00"/><circle cx="360" cy="252" r="126" fill="#002776"/><path d="M234,252 A126,126 0 0,0 486,252 A136,136 0 0,1 234,252" fill="#ffffff"/></svg> <span>Rio de Janeiro • Brasil</span>';
+          }
         }
         currentPhotoIsRio = !currentPhotoIsRio;
         
