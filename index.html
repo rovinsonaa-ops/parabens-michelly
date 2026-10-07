@@ -1,0 +1,1240 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <title>Feliz Aniversário, MICHELLY! 🇧🇷💚💛</title>
+  <meta name="description" content="Uma surpresa especial e inesquecível preparada exclusivamente para você, Michelly.">
+  
+  <!-- Open Graph / Meta -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Feliz Aniversário, MICHELLY! 🇧🇷💚💛">
+  <meta property="og:description" content="Uma surpresa mágica preparada com muito carinho para celebrar seu dia especial.">
+  <meta property="og:image" content="assets/michelly-rio.jpg">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,400&display=swap" rel="stylesheet">
+
+  <style>
+    /* =======================================================
+       RESET & ROOT VARIABLES — PALETA BRASIL LUXO
+       ======================================================= */
+    :root {
+      --br-green-deep: #021a0f;
+      --br-green-emerald: #024726;
+      --br-green-vibrant: #008744;
+      --br-green-glow: #00d66c;
+      --br-gold-light: #fff2a3;
+      --br-gold: #f7c948;
+      --br-gold-metallic: #d4a017;
+      --br-gold-deep: #a67908;
+      --br-blue-ocean: #002244;
+      --br-blue-sky: #0a4d8c;
+      --br-white-pure: #ffffff;
+      --br-white-cream: #fbfbf6;
+      --font-display: 'Cinzel', serif;
+      --font-serif: 'Playfair Display', Georgia, serif;
+      --font-sans: 'Montserrat', -apple-system, BlinkMacSystemFont, sans-serif;
+      --ease-lux: cubic-bezier(0.16, 1, 0.3, 1);
+      --ease-bounce: cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      -webkit-tap-highlight-color: transparent;
+      user-select: none;
+    }
+
+    html, body {
+      width: 100%;
+      height: 100%;
+      height: 100dvh;
+      overflow: hidden;
+      background-color: #01110a;
+      color: var(--br-white-cream);
+      font-family: var(--font-sans);
+      position: fixed;
+      left: 0;
+      top: 0;
+    }
+
+    /* =======================================================
+       ATMOSPHERE & AMBIENT CANVAS
+       ======================================================= */
+    #experience-root {
+      width: 100%;
+      height: 100%;
+      height: 100dvh;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      background: radial-gradient(ellipse at 50% 25%, #053b22 0%, #022013 45%, #011009 85%, #000a05 100%);
+    }
+
+    #ambient-canvas {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    /* Ambient Glowing Orbs */
+    .ambient-glow-mesh {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      z-index: 0;
+      overflow: hidden;
+    }
+
+    .glow-orb {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(80px);
+      opacity: 0.35;
+      animation: floatOrb 18s ease-in-out infinite alternate;
+    }
+
+    .glow-orb-1 {
+      width: 380px;
+      height: 380px;
+      background: radial-gradient(circle, #028a48 0%, rgba(2,138,72,0) 70%);
+      top: -10%;
+      left: -10%;
+    }
+
+    .glow-orb-2 {
+      width: 340px;
+      height: 340px;
+      background: radial-gradient(circle, #f7c948 0%, rgba(247,201,72,0) 70%);
+      bottom: 5%;
+      right: -10%;
+      animation-duration: 22s;
+      animation-delay: -5s;
+      opacity: 0.28;
+    }
+
+    .glow-orb-3 {
+      width: 300px;
+      height: 300px;
+      background: radial-gradient(circle, #004d99 0%, rgba(0,77,153,0) 70%);
+      bottom: -15%;
+      left: 15%;
+      animation-duration: 26s;
+      opacity: 0.22;
+    }
+
+    @keyframes floatOrb {
+      0% { transform: translate(0, 0) scale(1); }
+      50% { transform: translate(30px, 45px) scale(1.15); }
+      100% { transform: translate(-25px, 20px) scale(0.92); }
+    }
+
+    .tropical-silhouettes {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      z-index: 1;
+      opacity: 0.08;
+      background-image: 
+        radial-gradient(circle at 15% 10%, #00ff88 0, transparent 35%),
+        radial-gradient(circle at 85% 90%, #ffd700 0, transparent 35%);
+    }
+
+    /* =======================================================
+       AUDIO CONTROL BUTTON (DISCREET & LUXURIOUS)
+       ======================================================= */
+    .sound-control-btn {
+      position: absolute;
+      top: max(14px, env(safe-area-inset-top));
+      right: max(14px, env(safe-area-inset-right));
+      z-index: 120;
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      background: rgba(2, 32, 19, 0.75);
+      border: 1px solid rgba(247, 201, 72, 0.4);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      color: var(--br-gold);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      font-size: 1.1rem;
+      transition: all 0.3s var(--ease-lux);
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.5), 0 0 12px rgba(247, 201, 72, 0.2);
+    }
+
+    .sound-control-btn:active {
+      transform: scale(0.92);
+    }
+
+    .sound-control-btn.pulse-active {
+      border-color: rgba(247, 201, 72, 0.85);
+      box-shadow: 0 0 18px rgba(247, 201, 72, 0.4);
+      animation: soundPulse 2.4s infinite;
+    }
+
+    @keyframes soundPulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.06); }
+    }
+
+    /* =======================================================
+       MAIN CONTAINER & STAGES
+       ======================================================= */
+    .experience-container {
+      position: relative;
+      z-index: 10;
+      width: 100%;
+      max-width: 440px;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 16px 18px;
+    }
+
+    .stage-view {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 24px 20px;
+      opacity: 0;
+      visibility: hidden;
+      transform: scale(0.94) translateY(18px);
+      transition: opacity 0.85s var(--ease-lux), transform 0.85s var(--ease-lux), visibility 0.85s;
+      pointer-events: none;
+    }
+
+    .stage-view.active {
+      opacity: 1;
+      visibility: visible;
+      transform: scale(1) translateY(0);
+      pointer-events: auto;
+    }
+
+    .stage-view.exiting {
+      opacity: 0;
+      transform: scale(1.05) translateY(-15px);
+      pointer-events: none;
+    }
+
+    /* =======================================================
+       STAGE 1: INTRO (BIENVENIDA & INTRIGA)
+       ======================================================= */
+    .intro-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 7px 16px;
+      border-radius: 999px;
+      background: rgba(247, 201, 72, 0.12);
+      border: 1px solid rgba(247, 201, 72, 0.35);
+      color: var(--br-gold-light);
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 2.2px;
+      text-transform: uppercase;
+      margin-bottom: 22px;
+      backdrop-filter: blur(8px);
+    }
+
+    .flag-icon-svg {
+      width: 18px;
+      height: 13px;
+      display: inline-block;
+      vertical-align: middle;
+      border-radius: 2px;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.4);
+    }
+
+    .intro-title-wrap {
+      text-align: center;
+      margin-bottom: 14px;
+    }
+
+    .intro-name {
+      font-family: var(--font-display);
+      font-size: clamp(2.6rem, 11vw, 3.8rem);
+      font-weight: 800;
+      letter-spacing: 5px;
+      text-transform: uppercase;
+      background: linear-gradient(135deg, #ffffff 0%, #fff1a8 40%, #f7c948 70%, #d4a017 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      filter: drop-shadow(0 4px 18px rgba(247, 201, 72, 0.35));
+      line-height: 1.1;
+      margin-bottom: 8px;
+    }
+
+    .intro-subtitle {
+      font-family: var(--font-serif);
+      font-style: italic;
+      font-size: clamp(1.05rem, 4.3vw, 1.3rem);
+      color: rgba(255, 255, 255, 0.92);
+      letter-spacing: 0.5px;
+      text-align: center;
+      margin-bottom: 36px;
+      font-weight: 400;
+      text-shadow: 0 2px 10px rgba(0, 0, 0, 0.7);
+    }
+
+    /* Luxury Master Button */
+    .btn-lux-primary {
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 16px 32px;
+      min-height: 54px;
+      min-width: 250px;
+      border-radius: 999px;
+      background: linear-gradient(135deg, #fce074 0%, #f7c948 50%, #d49c12 100%);
+      color: #021a0f;
+      font-family: var(--font-sans);
+      font-size: 0.92rem;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      text-decoration: none;
+      border: none;
+      cursor: pointer;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), 0 0 25px rgba(247, 201, 72, 0.4);
+      transition: all 0.35s var(--ease-lux);
+      overflow: hidden;
+    }
+
+    .btn-lux-primary::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.5), transparent);
+      transition: left 0.75s ease;
+    }
+
+    .btn-lux-primary:hover::before,
+    .btn-lux-primary:active::before {
+      left: 100%;
+    }
+
+    .btn-lux-primary:active {
+      transform: scale(0.96);
+      box-shadow: 0 5px 18px rgba(0, 0, 0, 0.4), 0 0 15px rgba(247, 201, 72, 0.3);
+    }
+
+    .intro-footer-hint {
+      margin-top: 28px;
+      font-size: 0.78rem;
+      color: rgba(255, 255, 255, 0.5);
+      letter-spacing: 1px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    /* =======================================================
+       STAGE 2: A CAIXA DE PRESENTE 3D (PREMIUM BOX)
+       ======================================================= */
+    .gift-header-text {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .gift-tagline {
+      font-family: var(--font-serif);
+      font-style: italic;
+      font-size: clamp(1.2rem, 4.8vw, 1.45rem);
+      color: var(--br-gold-light);
+      margin-bottom: 6px;
+      text-shadow: 0 2px 10px rgba(0,0,0,0.6);
+    }
+
+    .gift-subhint {
+      font-size: 0.8rem;
+      color: rgba(255, 255, 255, 0.65);
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+    }
+
+    /* 3D Gift Stage */
+    .gift-stage-3d {
+      width: 210px;
+      height: 210px;
+      perspective: 900px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 12px 0 24px 0;
+      cursor: pointer;
+    }
+
+    .box-container {
+      width: 145px;
+      height: 145px;
+      position: relative;
+      transform-style: preserve-3d;
+      transform: rotateX(-16deg) rotateY(24deg);
+      transition: transform 0.6s var(--ease-lux);
+      animation: floatBox 4.5s ease-in-out infinite;
+    }
+
+    @keyframes floatBox {
+      0%, 100% { transform: translateY(0) rotateX(-16deg) rotateY(24deg); }
+      50% { transform: translateY(-12px) rotateX(-14deg) rotateY(28deg); }
+    }
+
+    .gift-stage-3d:active .box-container {
+      transform: scale(0.96) rotateX(-16deg) rotateY(24deg);
+    }
+
+    /* Box Body */
+    .box-body {
+      width: 145px;
+      height: 105px;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      transform-style: preserve-3d;
+    }
+
+    .box-face {
+      position: absolute;
+      background: linear-gradient(135deg, #025930 0%, #013d20 60%, #012815 100%);
+      border: 1px solid rgba(247, 201, 72, 0.25);
+      box-shadow: inset 0 0 25px rgba(0, 0, 0, 0.6);
+    }
+
+    .box-face::before {
+      content: '';
+      position: absolute;
+      background: linear-gradient(90deg, #fce074, #f7c948, #d49c12);
+      box-shadow: 0 0 8px rgba(247, 201, 72, 0.4);
+    }
+
+    .box-face.front  { width: 145px; height: 105px; transform: translateZ(72.5px); }
+    .box-face.front::before { width: 32px; height: 100%; left: 56.5px; top: 0; }
+
+    .box-face.back   { width: 145px; height: 105px; transform: rotateY(180deg) translateZ(72.5px); }
+    .box-face.back::before { width: 32px; height: 100%; left: 56.5px; top: 0; }
+
+    .box-face.right  { width: 145px; height: 105px; transform: rotateY(90deg) translateZ(72.5px); }
+    .box-face.right::before { width: 32px; height: 100%; left: 56.5px; top: 0; }
+
+    .box-face.left   { width: 145px; height: 105px; transform: rotateY(-90deg) translateZ(72.5px); }
+    .box-face.left::before { width: 32px; height: 100%; left: 56.5px; top: 0; }
+
+    .box-face.bottom { width: 145px; height: 145px; transform: rotateX(-90deg) translateZ(52.5px); background: #01190e; }
+
+    /* Box Lid */
+    .box-lid {
+      width: 155px;
+      height: 36px;
+      position: absolute;
+      top: -2px;
+      left: -5px;
+      transform-style: preserve-3d;
+      transform-origin: back top;
+      transition: transform 0.9s var(--ease-lux), opacity 0.8s;
+    }
+
+    .lid-face {
+      position: absolute;
+      background: linear-gradient(135deg, #036b3b 0%, #024726 60%, #01331b 100%);
+      border: 1px solid rgba(247, 201, 72, 0.35);
+      box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.5);
+    }
+
+    .lid-face.top {
+      width: 155px;
+      height: 155px;
+      transform: rotateX(90deg) translateZ(18px);
+      background: radial-gradient(circle at 50% 50%, #037541 0%, #024726 70%, #012b17 100%);
+    }
+
+    .lid-face.top::before {
+      content: '';
+      position: absolute;
+      width: 34px;
+      height: 100%;
+      left: 60.5px;
+      top: 0;
+      background: linear-gradient(90deg, #fce074, #f7c948, #d49c12);
+      box-shadow: 0 0 10px rgba(247, 201, 72, 0.5);
+    }
+
+    .lid-face.top::after {
+      content: '';
+      position: absolute;
+      height: 34px;
+      width: 100%;
+      top: 60.5px;
+      left: 0;
+      background: linear-gradient(180deg, #fce074, #f7c948, #d49c12);
+      box-shadow: 0 0 10px rgba(247, 201, 72, 0.5);
+    }
+
+    .lid-face.front  { width: 155px; height: 36px; transform: translateZ(77.5px); }
+    .lid-face.back   { width: 155px; height: 36px; transform: rotateY(180deg) translateZ(77.5px); }
+    .lid-face.right  { width: 155px; height: 36px; transform: rotateY(90deg) translateZ(77.5px); }
+    .lid-face.left   { width: 155px; height: 36px; transform: rotateY(-90deg) translateZ(77.5px); }
+
+    /* Golden Bow Ribbon on Top */
+    .lid-bow {
+      position: absolute;
+      top: -36px;
+      left: 52px;
+      width: 50px;
+      height: 50px;
+      transform-style: preserve-3d;
+      transform: translateZ(88px);
+    }
+
+    .bow-loop {
+      position: absolute;
+      width: 26px;
+      height: 26px;
+      border: 5px solid #f7c948;
+      border-radius: 50% 50% 0 50%;
+      background: radial-gradient(circle, #ffeaa7, #d4a017);
+      box-shadow: 0 0 12px rgba(247, 201, 72, 0.6);
+    }
+
+    .bow-loop-1 { transform: rotate(-45deg); left: -4px; top: 8px; }
+    .bow-loop-2 { transform: rotate(135deg); right: -4px; top: 8px; border-radius: 50% 50% 50% 0; }
+
+    .bow-knot {
+      position: absolute;
+      width: 15px;
+      height: 15px;
+      background: linear-gradient(135deg, #fff2a3, #f7c948, #a67908);
+      border-radius: 50%;
+      left: 17px;
+      top: 14px;
+      box-shadow: 0 0 10px rgba(247, 201, 72, 0.7);
+    }
+
+    /* Box Shadow beneath */
+    .box-ground-shadow {
+      position: absolute;
+      bottom: -32px;
+      left: 10px;
+      width: 125px;
+      height: 38px;
+      background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0) 70%);
+      border-radius: 50%;
+      transform: rotateX(90deg);
+      pointer-events: none;
+    }
+
+    /* Inner Glow Core */
+    .box-inner-light {
+      position: absolute;
+      inset: 0;
+      border-radius: 50%;
+      background: radial-gradient(circle, #fff7b3 0%, #f7c948 45%, rgba(0, 214, 108, 0.4) 75%, transparent 100%);
+      filter: blur(20px);
+      opacity: 0;
+      transform: scale(0.2);
+      transition: all 0.85s var(--ease-lux);
+      pointer-events: none;
+    }
+
+    /* OPENING ANIMATION SEQUENCE */
+    .box-container.opening {
+      animation: boxShake 0.45s ease-in-out;
+    }
+
+    @keyframes boxShake {
+      0%, 100% { transform: translateY(0) rotateX(-16deg) rotateY(24deg); }
+      20% { transform: translateY(-5px) rotateX(-18deg) rotateY(20deg) scale(1.03); }
+      40% { transform: translateY(-2px) rotateX(-14deg) rotateY(28deg) scale(1.05); }
+      60% { transform: translateY(-7px) rotateX(-19deg) rotateY(22deg) scale(1.06); }
+      80% { transform: translateY(-3px) rotateX(-15deg) rotateY(26deg) scale(1.04); }
+    }
+
+    .box-container.opened .box-lid {
+      transform: translateY(-90px) rotateX(-110deg) rotateZ(15deg);
+      opacity: 0.15;
+    }
+
+    .box-container.opened .box-inner-light {
+      opacity: 1;
+      transform: scale(3.5);
+    }
+
+    /* =======================================================
+       STAGE 3: REVELAÇÃO DA FOTOGRAFIA & MENSAGEM
+       ======================================================= */
+    #stage-reveal {
+      justify-content: flex-start;
+      padding-top: max(55px, calc(env(safe-area-inset-top) + 24px));
+      padding-bottom: max(16px, env(safe-area-inset-bottom));
+      overflow-y: auto;
+      scrollbar-width: none;
+    }
+
+    #stage-reveal::-webkit-scrollbar {
+      display: none;
+    }
+
+    .photo-card-wrapper {
+      position: relative;
+      width: 100%;
+      max-width: 270px;
+      margin-bottom: 12px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      flex-shrink: 0;
+    }
+
+    /* Luxury Frame */
+    .photo-frame-outer {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 9 / 12.5;
+      max-height: 340px;
+      border-radius: 22px;
+      padding: 5px;
+      background: linear-gradient(135deg, #ffe57f 0%, #d4a017 35%, #024726 70%, #f7c948 100%);
+      box-shadow: 0 16px 45px rgba(0, 0, 0, 0.65), 0 0 30px rgba(247, 201, 72, 0.35);
+      animation: frameBreathing 6s ease-in-out infinite alternate;
+      overflow: hidden;
+    }
+
+    @keyframes frameBreathing {
+      0% { box-shadow: 0 16px 45px rgba(0, 0, 0, 0.65), 0 0 20px rgba(247, 201, 72, 0.25); }
+      100% { box-shadow: 0 20px 55px rgba(0, 0, 0, 0.75), 0 0 40px rgba(247, 201, 72, 0.45); }
+    }
+
+    .photo-frame-inner {
+      width: 100%;
+      height: 100%;
+      border-radius: 17px;
+      overflow: hidden;
+      position: relative;
+      background-color: #021a0f;
+    }
+
+    /* Authentic Photo — NO altering of face! */
+    .photo-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 22%;
+      display: block;
+      transition: opacity 0.4s ease, transform 0.8s var(--ease-lux);
+    }
+
+    /* Frame Ambient Edge Lighting */
+    .photo-frame-inner::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border-radius: 17px;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.12) 0%, transparent 40%, rgba(2, 26, 15, 0.5) 100%);
+      pointer-events: none;
+    }
+
+    /* Rio de Janeiro Location Badge */
+    .photo-location-pill {
+      position: absolute;
+      bottom: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: rgba(2, 26, 15, 0.85);
+      border: 1px solid rgba(247, 201, 72, 0.45);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      padding: 5px 12px;
+      border-radius: 999px;
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 1.2px;
+      color: var(--br-gold-light);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+      z-index: 2;
+      white-space: nowrap;
+    }
+
+    /* Switch Photo Miniature Pill */
+    .btn-switch-photo {
+      background: transparent;
+      border: none;
+      color: rgba(255, 255, 255, 0.7);
+      font-size: 0.74rem;
+      letter-spacing: 1px;
+      cursor: pointer;
+      text-decoration: underline;
+      margin-top: 6px;
+      padding: 3px 8px;
+    }
+
+    /* Birthday Header after reveal */
+    .bday-headline {
+      text-align: center;
+      margin-bottom: 10px;
+      width: 100%;
+    }
+
+    .bday-main-title {
+      font-family: var(--font-display);
+      font-size: clamp(1.25rem, 5.2vw, 1.65rem);
+      font-weight: 800;
+      letter-spacing: 2px;
+      line-height: 1.25;
+      text-transform: uppercase;
+      background: linear-gradient(135deg, #ffffff 0%, #fff2a3 30%, #f7c948 70%, #00d66c 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      filter: drop-shadow(0 2px 10px rgba(0, 0, 0, 0.6));
+    }
+
+    /* Emotional Dedication Card */
+    .emotional-quote-card {
+      background: rgba(2, 38, 22, 0.75);
+      border: 1px solid rgba(247, 201, 72, 0.35);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-radius: 16px;
+      padding: 12px 16px;
+      margin-bottom: 14px;
+      text-align: center;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+      max-width: 330px;
+      width: 100%;
+    }
+
+    .emotional-quote-text {
+      font-family: var(--font-serif);
+      font-style: italic;
+      font-size: clamp(0.85rem, 3.5vw, 0.95rem);
+      line-height: 1.5;
+      color: rgba(255, 255, 255, 0.94);
+    }
+
+    /* Action Toolbar */
+    .actions-toolbar {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+      width: 100%;
+      max-width: 280px;
+    }
+
+    .actions-toolbar .btn-lux-primary {
+      min-height: 48px;
+      min-width: 240px;
+      padding: 12px 24px;
+      font-size: 0.85rem;
+    }
+
+    .btn-lux-secondary {
+      background: rgba(2, 38, 22, 0.85);
+      border: 1px solid rgba(247, 201, 72, 0.4);
+      color: var(--br-gold-light);
+      padding: 11px 22px;
+      border-radius: 999px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      transition: all 0.3s var(--ease-lux);
+      text-decoration: none;
+      width: 100%;
+    }
+
+    .btn-lux-secondary:active {
+      transform: scale(0.96);
+      background: rgba(247, 201, 72, 0.2);
+    }
+
+    /* =======================================================
+       CINEMATIC TRANSITION OVERLAY
+       ======================================================= */
+    #cinematic-flash {
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at 50% 50%, #fff7b3 0%, #f7c948 40%, #008744 80%, #01110a 100%);
+      z-index: 80;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.65s var(--ease-lux);
+    }
+
+    #cinematic-flash.flash-active {
+      opacity: 0.92;
+    }
+
+    /* Accessibility: Reduced Motion */
+    @media (prefers-reduced-motion: reduce) {
+      *, ::before, ::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
+      .box-container { animation: none !important; }
+      .glow-orb { animation: none !important; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Audio Element (Prepared for User's Track) -->
+  <audio id="birthday-audio" preload="auto" loop></audio>
+
+  <!-- Ambient Visual Canvases & Lighting -->
+  <div class="ambient-glow-mesh">
+    <div class="glow-orb glow-orb-1"></div>
+    <div class="glow-orb glow-orb-2"></div>
+    <div class="glow-orb glow-orb-3"></div>
+  </div>
+  <div class="tropical-silhouettes"></div>
+  <canvas id="ambient-canvas"></canvas>
+
+  <!-- Discreet Floating Sound Toggle -->
+  <button id="btn-sound-toggle" class="sound-control-btn" aria-label="Controlar som da experiência" title="Música de fundo">
+    <span id="sound-icon">🔇</span>
+  </button>
+
+  <!-- Cinematic Flash Overlay -->
+  <div id="cinematic-flash"></div>
+
+  <!-- Main Root Container -->
+  <main id="experience-root">
+    <div class="experience-container">
+
+      <!-- ===================================================
+           STAGE 1: INTRO (BIENVENIDA & INTRIGA)
+           =================================================== -->
+      <section id="stage-intro" class="stage-view active" aria-label="Boas-vindas para Michelly">
+        <div class="intro-badge">
+          <svg class="flag-icon-svg" viewBox="0 0 720 504"><rect width="720" height="504" fill="#009b3a"/><polygon points="360,42 660,252 360,462 60,252" fill="#fedf00"/><circle cx="360" cy="252" r="126" fill="#002776"/><path d="M234,252 A126,126 0 0,0 486,252 A136,136 0 0,1 234,252" fill="#ffffff"/></svg>
+          <span>UMA SURPRESA ESPECIAL</span>
+        </div>
+
+        <div class="intro-title-wrap">
+          <h1 class="intro-name">MICHELLY</h1>
+        </div>
+
+        <p class="intro-subtitle">Hoje é um dia muito especial... 💚💛</p>
+
+        <button id="btn-start-surprise" class="btn-lux-primary" aria-label="Começar a surpresa">
+          <span>COMEÇAR A SURPRESA ✨</span>
+        </button>
+
+        <div class="intro-footer-hint">
+          <span>Toque para viver este momento</span>
+        </div>
+      </section>
+
+      <!-- ===================================================
+           STAGE 2: A CAIXA DE PRESENTE 3D
+           =================================================== -->
+      <section id="stage-gift" class="stage-view" aria-label="Abrir presente para Michelly">
+        <div class="gift-header-text">
+          <p class="gift-tagline">Tem uma surpresa para você...</p>
+          <span class="gift-subhint">Toque na caixa mágica</span>
+        </div>
+
+        <!-- 3D Interactive Box -->
+        <div id="gift-stage-tap" class="gift-stage-3d" role="button" tabindex="0" aria-label="Caixa de presente 3D de luxo">
+          <div id="box-container-3d" class="box-container">
+            <!-- Box Body -->
+            <div class="box-body">
+              <div class="box-face front"></div>
+              <div class="box-face back"></div>
+              <div class="box-face right"></div>
+              <div class="box-face left"></div>
+              <div class="box-face bottom"></div>
+            </div>
+            <!-- Box Lid -->
+            <div class="box-lid">
+              <div class="lid-face top"></div>
+              <div class="lid-face front"></div>
+              <div class="lid-face back"></div>
+              <div class="lid-face right"></div>
+              <div class="lid-face left"></div>
+              <!-- Bow Ribbon -->
+              <div class="lid-bow">
+                <div class="bow-loop bow-loop-1"></div>
+                <div class="bow-loop bow-loop-2"></div>
+                <div class="bow-knot"></div>
+              </div>
+            </div>
+            <!-- Inner Light Core -->
+            <div class="box-inner-light"></div>
+            <!-- Ground Shadow -->
+            <div class="box-ground-shadow"></div>
+          </div>
+        </div>
+
+        <button id="btn-open-gift" class="btn-lux-primary" aria-label="Abrir presente">
+          <span>ABRIR PRESENTE 🎁</span>
+        </button>
+      </section>
+
+      <!-- ===================================================
+           STAGE 3: REVELAÇÃO DA FOTOGRAFIA & CELEBRAÇÃO
+           =================================================== -->
+      <section id="stage-reveal" class="stage-view" aria-label="Fotografia e Felicitação para Michelly">
+        <!-- Photo with Luxury Brazilian Frame -->
+        <div class="photo-card-wrapper">
+          <div class="photo-frame-outer">
+            <div class="photo-frame-inner">
+              <img id="michelly-main-photo" class="photo-img" src="assets/michelly-rio.jpg" alt="Michelly no Rio de Janeiro" loading="eager">
+              <div class="photo-location-pill">
+                <svg class="flag-icon-svg" viewBox="0 0 720 504"><rect width="720" height="504" fill="#009b3a"/><polygon points="360,42 660,252 360,462 60,252" fill="#fedf00"/><circle cx="360" cy="252" r="126" fill="#002776"/><path d="M234,252 A126,126 0 0,0 486,252 A136,136 0 0,1 234,252" fill="#ffffff"/></svg>
+                <span>Rio de Janeiro • Brasil</span>
+              </div>
+            </div>
+          </div>
+          <button id="btn-toggle-photo" class="btn-switch-photo" aria-label="Alternar foto">
+            ✦ Ver outro momento
+          </button>
+        </div>
+
+        <!-- Birthday Header after reveal -->
+        <div class="bday-headline">
+          <h2 class="bday-main-title">
+            FELIZ ANIVERSÁRIO, MICHELLY! 
+            <svg class="flag-icon-svg" style="width: 22px; height: 16px; margin: 0 4px;" viewBox="0 0 720 504"><rect width="720" height="504" fill="#009b3a"/><polygon points="360,42 660,252 360,462 60,252" fill="#fedf00"/><circle cx="360" cy="252" r="126" fill="#002776"/><path d="M234,252 A126,126 0 0,0 486,252 A136,136 0 0,1 234,252" fill="#ffffff"/></svg>
+            💛
+          </h2>
+        </div>
+
+        <!-- Emotional Dedication -->
+        <div class="emotional-quote-card">
+          <p id="bday-emotional-text" class="emotional-quote-text">
+            "Que seu novo ano seja repleto de sorrisos contagiantes, saúde, amor, paz e muitas conquistas inesquecíveis. Parabéns pelo seu dia!"
+          </p>
+        </div>
+
+        <!-- Action Toolbar -->
+        <div class="actions-toolbar">
+          <button id="btn-celebrate-again" class="btn-lux-primary">
+            <span>PARABÉNS, MICHELLY! 🎉</span>
+          </button>
+          
+          <button id="btn-replay-journey" class="btn-lux-secondary">
+            <span>🔄 Rever a Surpresa</span>
+          </button>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- =======================================================
+       JAVASCRIPT ARCHITECTURE & PARTICLE ENGINE
+       ======================================================= -->
+  <script>
+    // =======================================================
+    // CONFIGURAÇÃO CENTRAL FÁCIL DE MODIFICAR
+    // =======================================================
+    const CONFIG = {
+      BIRTHDAY_NAME: "MICHELLY",
+      PHOTO_URL_PRIMARY: "assets/michelly-rio.jpg",
+      PHOTO_URL_SECONDARY: "assets/michelly-portrait.jpg",
+      MUSIC_URL: "", // Espacio preparado para la música que proporcionará el usuario
+      BIRTHDAY_MESSAGE: "Que seu novo ano seja repleto de sorrisos contagiantes, saúde, amor, paz e muitas conquistas inesquecíveis. Parabéns pelo seu dia!",
+      WHATSAPP_NUMBER: "" // Opcional para enviar felicitación
+    };
+
+    // =======================================================
+    // SISTEMA DE AUDIO INTELIGENTE
+    // =======================================================
+    const audioElement = document.getElementById("birthday-audio");
+    const soundToggleBtn = document.getElementById("btn-sound-toggle");
+    const soundIcon = document.getElementById("sound-icon");
+    let isAudioPlaying = false;
+
+    function initAudioSource() {
+      if (CONFIG.MUSIC_URL && CONFIG.MUSIC_URL.trim() !== "") {
+        audioElement.src = CONFIG.MUSIC_URL;
+      }
+    }
+
+    function playExperienceAudio() {
+      if (CONFIG.MUSIC_URL && CONFIG.MUSIC_URL.trim() !== "") {
+        audioElement.play().then(() => {
+          isAudioPlaying = true;
+          soundIcon.innerText = "🔊";
+          soundToggleBtn.classList.add("pulse-active");
+        }).catch(err => {
+          console.log("Reprodução pendente:", err);
+        });
+      } else {
+        // Modo silencioso amigável até que o usuário insira o link
+        isAudioPlaying = true;
+        soundIcon.innerText = "🔊";
+        soundToggleBtn.classList.add("pulse-active");
+      }
+    }
+
+    function toggleAudio() {
+      if (isAudioPlaying) {
+        if (CONFIG.MUSIC_URL && CONFIG.MUSIC_URL.trim() !== "") {
+          audioElement.pause();
+        }
+        isAudioPlaying = false;
+        soundIcon.innerText = "🔇";
+        soundToggleBtn.classList.remove("pulse-active");
+      } else {
+        playExperienceAudio();
+      }
+    }
+
+    soundToggleBtn.addEventListener("click", toggleAudio);
+
+    // =======================================================
+    // CANVAS PARTICLE SYSTEM (CONFISERIE, OURO & BRASIL)
+    // =======================================================
+    const canvas = document.getElementById("ambient-canvas");
+    const ctx = canvas.getContext("2d");
+    let width, height;
+    let particles = [];
+    let isCelebrationMode = false;
+
+    function resizeCanvas() {
+      width = canvas.width = window.innerWidth;
+      height = canvas.height = window.innerHeight;
+    }
+    window.addEventListener("resize", resizeCanvas);
+    resizeCanvas();
+
+    const PALETTE_BR = [
+      "rgba(247, 201, 72, 0.85)",  // Ouro
+      "rgba(255, 235, 120, 0.9)",  // Ouro claro
+      "rgba(0, 214, 108, 0.75)",   // Verde tropical
+      "rgba(2, 138, 72, 0.7)",     // Esmeralda
+      "rgba(10, 110, 220, 0.65)",  // Azul oceano
+      "rgba(255, 255, 255, 0.95)"  // Pérola / Diamante
+    ];
+
+    class Particle {
+      constructor(isBurst = false) {
+        this.reset(isBurst);
+      }
+
+      reset(isBurst = false) {
+        if (isBurst) {
+          this.x = width / 2;
+          this.y = height / 2;
+          const angle = Math.random() * Math.PI * 2;
+          const speed = Math.random() * 8 + 3;
+          this.vx = Math.cos(angle) * speed;
+          this.vy = Math.sin(angle) * speed - 2;
+          this.size = Math.random() * 6 + 4;
+          this.gravity = 0.15;
+          this.life = 1;
+          this.decay = Math.random() * 0.015 + 0.008;
+        } else {
+          this.x = Math.random() * width;
+          this.y = Math.random() * height;
+          this.vx = (Math.random() - 0.5) * 0.8;
+          this.vy = Math.random() * 0.8 + 0.3;
+          this.size = Math.random() * 3 + 1.2;
+          this.gravity = 0;
+          this.life = Math.random() * 0.7 + 0.3;
+          this.decay = 0.003;
+        }
+
+        this.color = PALETTE_BR[Math.floor(Math.random() * PALETTE_BR.length)];
+        this.shape = Math.random() > 0.4 ? "circle" : "ribbon";
+        this.rotation = Math.random() * Math.PI * 2;
+        this.rotSpeed = (Math.random() - 0.5) * 0.1;
+      }
+
+      update() {
+        this.x += this.vx;
+        this.y += this.vy;
+        this.vy += this.gravity;
+        this.rotation += this.rotSpeed;
+        this.life -= this.decay;
+
+        if (this.life <= 0 || this.y > height + 20) {
+          if (isCelebrationMode) {
+            this.reset(false);
+            this.y = -10;
+          } else {
+            this.reset(false);
+          }
+        }
+      }
+
+      draw() {
+        ctx.save();
+        ctx.translate(this.x, this.y);
+        ctx.rotate(this.rotation);
+        ctx.globalAlpha = Math.max(0, this.life);
+        ctx.fillStyle = this.color;
+
+        if (this.shape === "circle") {
+          ctx.beginPath();
+          ctx.arc(0, 0, this.size, 0, Math.PI * 2);
+          ctx.fill();
+        } else {
+          ctx.fillRect(-this.size, -this.size / 2, this.size * 2, this.size);
+        }
+        ctx.restore();
+      }
+    }
+
+    for (let i = 0; i < 45; i++) {
+      particles.push(new Particle(false));
+    }
+
+    function triggerCelebrationBurst(count = 80) {
+      isCelebrationMode = true;
+      for (let i = 0; i < count; i++) {
+        particles.push(new Particle(true));
+      }
+    }
+
+    function animateCanvas() {
+      ctx.clearRect(0, 0, width, height);
+      for (let i = 0; i < particles.length; i++) {
+        particles[i].update();
+        particles[i].draw();
+      }
+      requestAnimationFrame(animateCanvas);
+    }
+    animateCanvas();
+
+    // =======================================================
+    // MÁQUINA DE ESTADOS & NARRATIVA INTERATIVA
+    // =======================================================
+    const stageIntro = document.getElementById("stage-intro");
+    const stageGift = document.getElementById("stage-gift");
+    const stageReveal = document.getElementById("stage-reveal");
+
+    const btnStartSurprise = document.getElementById("btn-start-surprise");
+    const btnOpenGift = document.getElementById("btn-open-gift");
+    const giftStageTap = document.getElementById("gift-stage-tap");
+    const boxContainer3d = document.getElementById("box-container-3d");
+    const cinematicFlash = document.getElementById("cinematic-flash");
+
+    const btnTogglePhoto = document.getElementById("btn-toggle-photo");
+    const michellyMainPhoto = document.getElementById("michelly-main-photo");
+    const btnCelebrateAgain = document.getElementById("btn-celebrate-again");
+    const btnReplayJourney = document.getElementById("btn-replay-journey");
+
+    let isBoxOpened = false;
+    let currentPhotoIsRio = true;
+
+    // ETAPA 1 -> ETAPA 2: COMEÇAR A SURPRESA
+    btnStartSurprise.addEventListener("click", () => {
+      playExperienceAudio();
+
+      stageIntro.classList.add("exiting");
+      setTimeout(() => {
+        stageIntro.classList.remove("active", "exiting");
+        stageGift.classList.add("active");
+        triggerCelebrationBurst(25);
+      }, 550);
+    });
+
+    // ETAPA 2 -> ETAPA 3: ABERTURA DO PRESENTE
+    function openGiftSequence() {
+      if (isBoxOpened) return;
+      isBoxOpened = true;
+
+      // 1. Vibração inicial de suspense
+      boxContainer3d.classList.add("opening");
+
+      // 2. Abertura da tampa e clarão de luz
+      setTimeout(() => {
+        boxContainer3d.classList.remove("opening");
+        boxContainer3d.classList.add("opened");
+
+        triggerCelebrationBurst(120);
+
+        // Flash cinematográfico
+        setTimeout(() => {
+          cinematicFlash.classList.add("flash-active");
+
+          setTimeout(() => {
+            stageGift.classList.remove("active");
+            stageReveal.classList.add("active");
+            cinematicFlash.classList.remove("flash-active");
+            triggerCelebrationBurst(60);
+          }, 450);
+        }, 650);
+
+      }, 450);
+    }
+
+    btnOpenGift.addEventListener("click", openGiftSequence);
+    giftStageTap.addEventListener("click", openGiftSequence);
+
+    // Alternar entre a foto no Rio de Janeiro e o retrato
+    btnTogglePhoto.addEventListener("click", () => {
+      michellyMainPhoto.style.opacity = "0";
+      michellyMainPhoto.style.transform = "scale(0.95)";
+      
+      setTimeout(() => {
+        if (currentPhotoIsRio) {
+          michellyMainPhoto.src = CONFIG.PHOTO_URL_SECONDARY;
+          btnTogglePhoto.innerText = "✦ Ver foto no Rio de Janeiro";
+        } else {
+          michellyMainPhoto.src = CONFIG.PHOTO_URL_PRIMARY;
+          btnTogglePhoto.innerText = "✦ Ver outro momento";
+        }
+        currentPhotoIsRio = !currentPhotoIsRio;
+        
+        michellyMainPhoto.style.opacity = "1";
+        michellyMainPhoto.style.transform = "scale(1)";
+        triggerCelebrationBurst(20);
+      }, 300);
+    });
+
+    // Botão Parabéns Michelly (Mais confetes & brilhos)
+    btnCelebrateAgain.addEventListener("click", () => {
+      triggerCelebrationBurst(90);
+    });
+
+    // Reiniciar a jornada
+    btnReplayJourney.addEventListener("click", () => {
+      stageReveal.classList.remove("active");
+      boxContainer3d.classList.remove("opened", "opening");
+      isBoxOpened = false;
+      stageIntro.classList.add("active");
+      triggerCelebrationBurst(20);
+    });
+
+    // Inicialização
+    initAudioSource();
+  </script>
+</body>
+</html>
